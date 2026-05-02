@@ -13,7 +13,7 @@ const links = [
   },
 {
     title: "קישור לאתר - בשביל יעל",
-    url: "beshvilyael.com"
+    url: "https://www.beshvilyael.com/"
   }
   /* {
     title: "מפות אישיות לפי יעל",
