@@ -42,7 +42,7 @@ body::before {
 .card {
   width: 100%;
   max-width: 540px;
-  background: rgba(255, 255, 255, 0.93);
+  background: rgba(255, 255, 255, 0.50);
   border-radius: 18px;
   padding: 30px 24px;
   box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
