@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-}
+}background-color
 
 body {
   margin: 0;
@@ -15,12 +15,13 @@ body {
   background-size: 1200px;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #1f2a34;
+  background-color: #477088;
 
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 24px;
+  
 }
 .card {
   width: 100%;
@@ -45,7 +46,10 @@ h1 {
 }
 
 .link-button {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
   width: 100%;
   margin: 12px 0;
   padding: 15px 18px;
@@ -54,7 +58,6 @@ h1 {
   border: 1px solid rgba(213, 222, 210, 0.6);
   border-radius: 12px;
 
-  text-align: right;
   text-decoration: none;
   color: #1f4f35;
 
@@ -62,6 +65,19 @@ h1 {
   font-weight: bold;
 
   transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.link-button::before {
+  content: "";
+  display: inline-block;
+
+  width: 22px;
+  height: 22px;
+
+  background-image: url("icons/marker.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  margin-left: 10px; /* כי RTL */
 }
 .link-button:hover {
   background: rgba(237, 244, 234, 0.55);
