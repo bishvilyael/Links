@@ -1,6 +1,6 @@
 const links = [
   {
-    title: "מפה מצטברת מתחילת המיזם 4089 נקודות",
+    title: "מפה מצטברת מתחילת המיזם - 4297 נקודות במפה",
     url: "https://bishvilyael.github.io/FullMap_J_Split/"
   },
 {
@@ -13,7 +13,7 @@ const links = [
   },
 {
     title: "קישור לאתר - בשביל יעל",
-    url: "https://https://www.beshvilyael.com/"
+    url: "https://https://www.beshvilyael.com"
   }
   /* {
     title: "מפות אישיות לפי יעל",
