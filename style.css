@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  direction: rtl;
+
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.62)),
+    url("World_map_blank.svg");
+
+  background-size: 1200px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #1f2a24;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+.card {
+  width: 100%;
+  max-width: 540px;
+  background: rgba(255, 255, 255, 0.93);
+  border-radius: 18px;
+  padding: 30px 24px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+  text-align: center;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 30px;
+  color: #243528;
+}
+
+.subtitle {
+  margin: 0 0 26px;
+  color: #555;
+  font-size: 16px;
+}
+
+.link-button {
+  display: block;
+  width: 100%;
+  margin: 12px 0;
+  padding: 15px 18px;
+
+  background: #ffffff;
+  border: 1px solid #d5ded2;
+  border-radius: 12px;
+
+  text-decoration: none;
+  color: #1f4f35;
+
+  font-size: 19px;
+  font-weight: bold;
+
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.link-button:hover {
+  background: #edf4ea;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* התאמה לטלפון */
+@media (max-width: 600px) {
+  body {
+    padding: 14px;
+    align-items: flex-start;
+    background-size: 850px;
+    background-position: center top;
+  }
+
+  .card {
+    margin-top: 24px;
+    padding: 24px 16px;
+    border-radius: 16px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  .subtitle {
+    font-size: 15px;
+  }
+
+  .link-button {
+    font-size: 17px;
+    padding: 14px;
+  }
+}
