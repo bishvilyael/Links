@@ -2,27 +2,43 @@
   box-sizing: border-box;
 }
 
+html,
 body {
   margin: 0;
   min-height: 100vh;
+}
+
+body {
   font-family: Arial, sans-serif;
   direction: rtl;
-
-  background:
-    linear-gradient(rgba(31, 42, 52, 0.55), rgba(31, 42, 52, 0.55)),
-    url("World_map_blank.svg");
-
-  background-size: 1200px;
-  background-repeat: no-repeat;
-  background-position: center;
   background-color: #477088;
 
   display: flex;
   justify-content: center;
   align-items: center;
+
   padding: 24px;
-  
+  position: relative;
+  overflow-x: hidden;
 }
+
+/* שכבת הרקע של המפה */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background-image:
+    linear-gradient(rgba(71, 112, 136, 0.25), rgba(71, 112, 136, 0.25)),
+    url("World_map_blank.svg");
+
+  background-size: 1200px auto;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  z-index: -1;
+}
+
 .card {
   width: 100%;
   max-width: 540px;
@@ -58,6 +74,7 @@ h1 {
   border: 1px solid rgba(213, 222, 210, 0.6);
   border-radius: 12px;
 
+  text-align: right;
   text-decoration: none;
   color: #1f4f35;
 
@@ -66,9 +83,10 @@ h1 {
 
   transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
 }
+
 .link-button::before {
   content: "";
-  display: inline-block;
+  flex: 0 0 auto;
 
   width: 22px;
   height: 22px;
@@ -76,20 +94,26 @@ h1 {
   background-image: url("icons/marker.png");
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: center;
 
-  margin-left: 10px; /* כי RTL */
+  margin-left: 10px;
 }
+
 .link-button:hover {
   background: rgba(237, 244, 234, 0.55);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
+
 /* התאמה לטלפון */
 @media (max-width: 600px) {
   body {
     padding: 14px;
     align-items: flex-start;
-    background-size: 850px;
+  }
+
+  body::before {
+    background-size: 850px auto;
     background-position: center top;
   }
 
