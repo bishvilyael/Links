@@ -39,6 +39,7 @@ container.appendChild(playlistButton);
 
 const videoSection = document.createElement("div");
 videoSection.className = "video-section hidden";
+
 videoSection.innerHTML = `
   <div class="video-wrapper">
     <iframe
@@ -49,6 +50,13 @@ videoSection.innerHTML = `
       allowfullscreen>
     </iframe>
   </div>
+
+  <a class="playlist-open-button"
+     href="https://www.youtube.com/playlist?list=PLEfko1eUSu2Uw5Q22xmRMpzxNR5JFroFE"
+     target="_blank"
+     rel="noopener noreferrer">
+    פתח את רשימת הסרטונים המלאה ביוטיוב
+  </a>
 `;
 
 container.appendChild(videoSection);
